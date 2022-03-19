@@ -81,6 +81,7 @@ public class UserController {
     @PostMapping("/loginout")
     public R<String> loginOut(HttpServletRequest request){
         request.getSession().removeAttribute("/user");
+        System.out.println("成功");
         return R.success("退出成功");
     }
 }
